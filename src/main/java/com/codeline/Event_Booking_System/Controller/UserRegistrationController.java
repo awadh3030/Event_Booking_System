@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
-@RequestMapping("api/users")
+@RequestMapping("/api")
+
 public class UserRegistrationController {
 
 
@@ -19,13 +20,12 @@ public class UserRegistrationController {
         this.userRegistrationRepository = userRegistrationRepository;
     }
 
-    @PostMapping("register")
+    @RequestMapping("/api/register")
     public String registerUser(@RequestBody UserRegistration userRegistration) {
         if (userRegistrationRepository.findByUsername(userRegistration.getUsername()) != null) {
             return "Username already exists";
         }
 
-        // Additional validation and business logic can be added here
 
         userRegistrationRepository.save(userRegistration);
         return "User registered successfully";
