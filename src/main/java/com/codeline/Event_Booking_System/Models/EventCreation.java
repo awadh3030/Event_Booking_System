@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +13,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@Data
 @Entity
+@Data
 public class EventCreation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
