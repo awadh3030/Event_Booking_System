@@ -20,12 +20,15 @@ public class UserRegistrationController {
         this.userRegistrationRepository = userRegistrationRepository;
     }
 
-    @RequestMapping("/api/register")
-    public String registerUser(@RequestBody UserRegistration userRegistration) {
+    @PostMapping("/register")
+    public String UserRegistration(@RequestBody UserRegistration userRegistration) {
         if (userRegistrationRepository.findByUsername(userRegistration.getUsername()) != null) {
             return "Username already exists";
         }
 
+        UserRegistration userRegistration1 = new UserRegistration();
+        userRegistration1.setUsername(userRegistration.getUsername());
+        userRegistration1.setPassword(userRegistration.getPassword());
 
         userRegistrationRepository.save(userRegistration);
         return "User registered successfully";
