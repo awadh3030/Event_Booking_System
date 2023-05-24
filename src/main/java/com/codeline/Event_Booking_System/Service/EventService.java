@@ -26,14 +26,15 @@ GetEventResponse event;
 
 
 
+    public void saveAccount(Event event) {eventRepository.save(event);}
 
 
-    public GetEventResponse getEventById(Long eventtId) {
-        Optional<Event> optionalEventSearch = eventRepository.findById(eventtId);
+    public GetEventResponse getEventById(Long eventId) {
+        Optional<Event> optionalEventSearch = eventRepository.findById(eventId);
         if(!optionalEventSearch.isEmpty())
         {
             Event event =  optionalEventSearch.get();
-            GetEventResponse eventResponse = new GetEventResponse(this.event.getLocation(), this.event.getStartDate(), this.event.getEventName());
+            GetEventResponse eventResponse = new GetEventResponse(event.getLocation(), event.getStartDate(), event.getEventName(),event.getTicketsAvailable());
             return eventResponse;
         }
 
