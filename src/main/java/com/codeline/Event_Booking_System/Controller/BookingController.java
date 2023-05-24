@@ -5,6 +5,7 @@ import com.codeline.Event_Booking_System.Models.Booking;
 import com.codeline.Event_Booking_System.Service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,7 +36,7 @@ public class BookingController extends BaseEntity {
 
 
 
-        @RequestMapping("DELETE /api/bookings/{bookingId")
+        @RequestMapping("DELETE /api/bookings/{bookingId}")
         public void deleteebooking (@PathVariable Long Id) {
             bookingService.deleteBookingById(Id);
         }
