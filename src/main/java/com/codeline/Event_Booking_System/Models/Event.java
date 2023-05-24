@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Date;
+
 @Getter
 @Setter
 @Entity
@@ -19,7 +21,7 @@ public class Event {
      Long id;
 
      String location;
-     LocalDate startDate;
+    Date startDate;
      LocalDate endDate;
      String eventName;
      int ticketsAvailable;
