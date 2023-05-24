@@ -23,10 +23,7 @@ GetEventResponse event;
 
 
 
-
-
-
-    public void saveAccount(Event event) {eventRepository.save(event);}
+    public void saveEvent(Event event) {eventRepository.save(event);}
 
 
     public GetEventResponse getEventById(Long eventId) {

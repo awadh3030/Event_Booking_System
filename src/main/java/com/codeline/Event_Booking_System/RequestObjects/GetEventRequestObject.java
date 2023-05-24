@@ -14,7 +14,7 @@ public class GetEventRequestObject {
     String location;
     LocalDate startDate;
 
-    
+
     String eventName;
     int ticketsAvailable;
 }

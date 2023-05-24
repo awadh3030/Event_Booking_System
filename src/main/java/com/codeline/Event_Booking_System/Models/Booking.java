@@ -10,9 +10,9 @@ import javax.persistence.Entity;
 @Setter
 @Entity
 @Data
-public class TicketBooking {
-   Long id;
-     Long eventId;
-     Long userId;
+public class Booking {
+
+    Long eventId;
+   Long userId;
      int numberOfTickets;
 }

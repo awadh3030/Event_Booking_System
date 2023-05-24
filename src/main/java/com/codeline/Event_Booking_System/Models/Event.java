@@ -23,4 +23,5 @@ public class Event {
      LocalDate endDate;
      String eventName;
      int ticketsAvailable;
+
 }
