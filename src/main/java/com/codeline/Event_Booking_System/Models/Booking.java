@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -21,6 +22,6 @@ public class Booking {
     Long id;
    String event;
     String location;
-    LocalDate startDate;
+    Date startDate;
      int numberOfTickets;
 }

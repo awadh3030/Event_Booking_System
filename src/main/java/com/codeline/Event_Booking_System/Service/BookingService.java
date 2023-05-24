@@ -1,6 +1,7 @@
 package com.codeline.Event_Booking_System.Service;
 
 import com.codeline.Event_Booking_System.Models.Booking;
+import com.codeline.Event_Booking_System.Models.UserRegistration;
 import com.codeline.Event_Booking_System.Repository.BookingRepository;
 import com.codeline.Event_Booking_System.ResponseObjects.GetBookingResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class BookingService {
 
 
 
-        public void savebooking(Booking booking) {bookingRepository.save(booking);}
+        public void saveBooking(Booking booking) {bookingRepository.save(booking);}
 
 
 
