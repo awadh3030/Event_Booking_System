@@ -1,5 +1,6 @@
 package com.codeline.Event_Booking_System.ResponseObjects;
 
+import com.codeline.Event_Booking_System.Models.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetEventResponse {
+public class GetEventResponse extends BaseEntity {
 
 
 

@@ -1,5 +1,6 @@
 package com.codeline.Event_Booking_System.Controller;
 
+import com.codeline.Event_Booking_System.Models.BaseEntity;
 import com.codeline.Event_Booking_System.Models.Event;
 import com.codeline.Event_Booking_System.RequestObjects.GetEventRequestObject;
 import com.codeline.Event_Booking_System.ResponseObjects.GetEventResponse;
@@ -10,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Date;
 import java.time.LocalDate;
+import java.util.Date;
 
 @RestController
-public class EventController {
+public class EventController extends BaseEntity {
 
 
 @Autowired
@@ -36,9 +37,9 @@ EventService eventService;
     public void createEvent(GetEventRequestObject eventRequestObject) {
 
         Event event = new Event();
-        event.setEventName(eventRequestObject.getEventName);
-        event.setTicketsAvailable(eventRequestObject.getTicketsAvailable);
-        event.setLocation(eventRequestObject.getTicketsAvailable);
+        event.setEventName(eventRequestObject.getEventName());
+        event.setTicketsAvailable(eventRequestObject.getTicketsAvailable());
+        event.setLocation(eventRequestObject.getLocation());
         event.setStartDate(new Date());
         eventService.saveEvent(event);
 
