@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @Setter
-public class GetEventRequestObject extends BaseEntity {
+public class GetEventRequestObjects extends BaseEntity {
     String location;
     LocalDate startDate;
 

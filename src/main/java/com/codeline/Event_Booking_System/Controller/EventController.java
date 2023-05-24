@@ -2,7 +2,7 @@ package com.codeline.Event_Booking_System.Controller;
 
 import com.codeline.Event_Booking_System.Models.BaseEntity;
 import com.codeline.Event_Booking_System.Models.Event;
-import com.codeline.Event_Booking_System.RequestObjects.GetEventRequestObject;
+import com.codeline.Event_Booking_System.RequestObjects.GetEventRequestObjects;
 import com.codeline.Event_Booking_System.ResponseObjects.GetEventResponse;
 import com.codeline.Event_Booking_System.Service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @RestController
@@ -24,7 +23,7 @@ EventService eventService;
 
 
     @RequestMapping("event/create")
-    public void saveEmployee (@RequestBody GetEventRequestObject employeeRequestObject) {
+    public void saveEmployee (@RequestBody GetEventRequestObjects employeeRequestObject) {
         createEvent(employeeRequestObject);
     }
 
@@ -34,7 +33,7 @@ EventService eventService;
     }
 
 
-    public void createEvent(GetEventRequestObject eventRequestObject) {
+    public void createEvent(GetEventRequestObjects eventRequestObject) {
 
         Event event = new Event();
         event.setEventName(eventRequestObject.getEventName());
