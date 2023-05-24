@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -12,7 +13,8 @@ import javax.persistence.Entity;
 @Data
 public class Booking {
 
-    Long eventId;
-   Long userId;
+   String event;
+    String location;
+    LocalDate startDate;
      int numberOfTickets;
 }
