@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Setter
 public class GetEventRequestObjects extends BaseEntity {
     String location;
-  //  LocalDate startDate;
+//    LocalDate startDate;
 
 
     String eventName;

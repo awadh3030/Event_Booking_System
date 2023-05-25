@@ -19,7 +19,7 @@ public class GetEventResponse extends BaseEntity {
 
 
     String location;
-   // LocalDate startDate;
+//    LocalDate startDate;
     String eventName;
     int ticketsAvailable;
 

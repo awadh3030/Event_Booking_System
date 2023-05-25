@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRegistrationRepository extends JpaRepository<UserRegistration, Long> {
 
-
+    public static UserRegistrationRepository userRegistrationRepository = null;
 
 }

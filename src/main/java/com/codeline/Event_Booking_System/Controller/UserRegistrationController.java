@@ -26,7 +26,7 @@ public class UserRegistrationController {
             userRegistration.setPassword(userRegistrationRequestObject.getPassword());
             userRegistrationService.saveUserRegistration(userRegistration);
 
-            ;
+
 
 
 

@@ -21,8 +21,8 @@ public class Event {
      Long id;
 
      String location;
-   // Date startDate;
-     //LocalDate endDate;
+//     Date startDate;
+//     LocalDate endDate;
      String eventName;
      int ticketsAvailable;
 

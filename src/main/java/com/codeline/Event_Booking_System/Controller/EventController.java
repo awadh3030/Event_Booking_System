@@ -27,7 +27,7 @@ EventService eventService;
         createEvent(eventRequestObject);
     }
 
-    @RequestMapping("event/get/{EventId}")
+    @RequestMapping("event/get/{eventId}")
     public GetEventResponse createEventSearch (@PathVariable Long eventId) {
         return eventService.getEventById(eventId);
     }
@@ -39,7 +39,7 @@ EventService eventService;
         event.setEventName(eventRequestObject.getEventName());
         event.setTicketsAvailable(eventRequestObject.getTicketsAvailable());
         event.setLocation(eventRequestObject.getLocation());
-     //   event.setStartDate(new Date());
+//       event.setStartDate(new Date());
         eventService.saveEvent(event);
 
 
