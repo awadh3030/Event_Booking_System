@@ -31,12 +31,12 @@ public class BookingController extends BaseEntity {
         booking.setNumberOfTickets(1000);
         booking.setEvent("OMR");
         booking.setLocation("OMR");
-        booking.setStartDate(new Date());
+       // booking.setStartDate(new Date());
         bookingService.saveBooking(booking);
 
 
 
-//        @RequestMapping("DELETE /api/bookings/{bookingId}") public void deleteebooking (@PathVariable Long Id) {
+//        @RequestMapping("api/bookings/{bookingId}") public void deleteebooking (@PathVariable Long Id) {
 //            bookingService.deleteBookingById(Id);
 //        }
 

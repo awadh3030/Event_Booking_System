@@ -22,7 +22,7 @@ public class Event {
 
      String location;
    // Date startDate;
-     LocalDate endDate;
+     //LocalDate endDate;
      String eventName;
      int ticketsAvailable;
 

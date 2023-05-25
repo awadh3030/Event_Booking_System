@@ -22,6 +22,6 @@ public class Booking {
     Long id;
    String event;
     String location;
-    Date startDate;
+    //Date startDate;
      int numberOfTickets;
 }
