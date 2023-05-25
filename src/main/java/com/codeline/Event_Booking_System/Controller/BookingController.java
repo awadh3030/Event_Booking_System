@@ -16,25 +16,23 @@ import static com.codeline.Event_Booking_System.Service.BookingService.bookingSe
 
 @RestController
 public class BookingController extends BaseEntity {
-//   @Autowired
-//    BookingService bookingService ;
+  @Autowired
+    BookingService bookingService ;
 
     @RequestMapping("api/booking")
     public List<Booking> getBooking() {
         return bookingService.getBooking();
     }
 
-    @PostMapping("api/booking/numberOfTickets")
+    @RequestMapping("api/booking/Tickets")
     public void saveBooking(@RequestBody GetBookingRequestObjects bookingRequestObjects){
             createBooking(bookingRequestObjects);
     }
 
 
-
     public void createBooking(GetBookingRequestObjects bookingRequestObjects) {
 
         Booking booking = new Booking();
-
         booking.setNumberOfTickets(bookingRequestObjects.getNumberOfTickets());
         booking.setEvent("OMR");
         booking.setLocation("OMR");
@@ -43,7 +41,7 @@ public class BookingController extends BaseEntity {
 
     }
 
-       @RequestMapping("DELETE /api/bookings/{bookingId}") public void deleteebooking (@PathVariable Long Id) {
+       @RequestMapping("api/bookings/{Id}") public void deletebooking (@PathVariable Long Id) {
             bookingService.deleteBookingById(Id);
         }
 

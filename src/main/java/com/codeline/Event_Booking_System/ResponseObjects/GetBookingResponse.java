@@ -15,5 +15,5 @@ public class GetBookingResponse {
     String event;
     String location;
   //  LocalDate startDate;
-    int numberOfTickets;
+    Integer numberOfTickets;
 }

@@ -9,12 +9,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.codeline.Event_Booking_System.Repository.BookingRepository.bookingRepository;
+
 
 @Service
 public class BookingService {
 
-
+@Autowired
+BookingRepository bookingRepository;
     public static BookingService bookingService;
 //    @Autowired
 //    BookingRepository bookingRepository;

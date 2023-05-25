@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 
-    public static BookingRepository bookingRepository = null;
+    //public static BookingRepository bookingRepository = null;
 }

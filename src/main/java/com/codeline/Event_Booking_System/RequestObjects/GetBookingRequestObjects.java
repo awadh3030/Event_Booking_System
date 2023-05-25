@@ -14,5 +14,5 @@ public class GetBookingRequestObjects {
     String event;
     String location;
     LocalDate startDate;
-    int numberOfTickets;
+    Integer numberOfTickets;
 }
