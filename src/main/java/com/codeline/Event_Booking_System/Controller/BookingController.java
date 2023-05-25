@@ -36,10 +36,9 @@ public class BookingController extends BaseEntity {
 
 
 
-        @RequestMapping("DELETE /api/bookings/{bookingId}")
-        public void deleteebooking (@PathVariable Long Id) {
-            bookingService.deleteBookingById(Id);
-        }
+//        @RequestMapping("DELETE /api/bookings/{bookingId}") public void deleteebooking (@PathVariable Long Id) {
+//            bookingService.deleteBookingById(Id);
+//        }
 
     }
 }

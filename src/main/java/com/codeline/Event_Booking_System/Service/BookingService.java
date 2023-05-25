@@ -18,26 +18,22 @@ public class BookingService {
 
 
     @Autowired
-    GetBookingResponse booking ;
-
+    GetBookingResponse booking;
 
 
     public List<Booking> getBooking() {
         return bookingRepository.findAll();
+    }
+
+        public void saveBooking (Booking booking){
+            bookingRepository.save(booking);
+        }
 
 
-
-        public void saveBooking(Booking booking) {bookingRepository.save(booking);}
-
-
-
-
-        public void deleteBookingeById(Long bookingId) {
+        public void deleteBookingById (Long bookingId){
             bookingRepository.deleteById(bookingId);
         }
 
 
-
-
     }
-}
+

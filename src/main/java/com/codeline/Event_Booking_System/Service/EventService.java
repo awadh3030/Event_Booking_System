@@ -20,10 +20,6 @@ GetEventResponse event;
 
 
 
-
-
-
-
     public void saveEvent(Event event) {eventRepository.save(event);}
 
 
@@ -32,7 +28,7 @@ GetEventResponse event;
         if(!optionalEventSearch.isEmpty())
         {
             Event event =  optionalEventSearch.get();
-            GetEventResponse eventResponse = new GetEventResponse(event.getLocation(), event.getStartDate(), event.getEventName(),event.getTicketsAvailable());
+            GetEventResponse eventResponse = new GetEventResponse(event.getLocation(), event.getEventName(),event.getTicketsAvailable());
             return eventResponse;
         }
 

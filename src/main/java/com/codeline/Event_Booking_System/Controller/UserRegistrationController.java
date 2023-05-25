@@ -9,30 +9,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
-
-
 public class UserRegistrationController {
 
     @Autowired
     UserRegistrationService userRegistrationService;
+
     @RequestMapping("api/register")
     public void saveAccount(@RequestBody GetUserRegistrationRequestObjects userRegistrationRequestObject) {
-        createUserRegistration(UserRegistrationRequestObject);
+        createUserRegistration(userRegistrationRequestObject);
+    }
 
-
-
-
-
-        public void createUserRegistration(GetUserRegistrationRequestObjects userRegistrationRequestObject ) {
+        public void createUserRegistration (GetUserRegistrationRequestObjects userRegistrationRequestObject ){
 
             UserRegistration userRegistration = new UserRegistration();
-            userRegistration.setusername(userRegistrationRequestObject.getusername());
-            userRegistration.setpassword(userRegistrationRequestObject.getpassword());
+            userRegistration.setUsername(userRegistrationRequestObject.getUsername());
+            userRegistration.setPassword(userRegistrationRequestObject.getPassword());
             userRegistrationService.saveUserRegistration(userRegistration);
 
-;
+            ;
 
 
-        }
 
+
+    }
 }

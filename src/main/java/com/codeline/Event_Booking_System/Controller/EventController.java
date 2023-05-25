@@ -23,8 +23,8 @@ EventService eventService;
 
 
     @RequestMapping("event/create")
-    public void saveEmployee (@RequestBody GetEventRequestObjects employeeRequestObject) {
-        createEvent(employeeRequestObject);
+    public void saveEmployee (@RequestBody GetEventRequestObjects eventRequestObject) {
+        createEvent(eventRequestObject);
     }
 
     @RequestMapping("event/get/{EventId}")
@@ -39,7 +39,7 @@ EventService eventService;
         event.setEventName(eventRequestObject.getEventName());
         event.setTicketsAvailable(eventRequestObject.getTicketsAvailable());
         event.setLocation(eventRequestObject.getLocation());
-        event.setStartDate(new Date());
+     //   event.setStartDate(new Date());
         eventService.saveEvent(event);
 
 
